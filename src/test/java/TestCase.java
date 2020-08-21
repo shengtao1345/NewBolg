@@ -5,9 +5,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestCase {
     @Test
-    public void test1(){
+    public void test2(){
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserDao userDao = ac.getBean("userDao", UserDao.class);
-        System.out.println(userDao.findAll());
+        System.out.println(userDao.findByName("zhouj"));
     }
 }
